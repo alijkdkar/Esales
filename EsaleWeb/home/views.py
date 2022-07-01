@@ -3,4 +3,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(requst):
-    return render(requst,'index.html')
+    viewData={'name':'shahzaD'}
+    return render(requst,'index.html',context=viewData)
