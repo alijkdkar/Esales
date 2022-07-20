@@ -17,4 +17,4 @@ class Address(models.Model):
     longtiut = models.DecimalField(max_digits=10,decimal_places=8)
     latitut = models.DecimalField(max_digits=10,decimal_places=8)
     createdDate = models.DateTimeField(auto_now_add=True,blank=True)
-    models.ForeignKey(Customer,on_delete=CASCADE)
+    customer  = models.ForeignKey(Customer,on_delete=models.CASCADE )
