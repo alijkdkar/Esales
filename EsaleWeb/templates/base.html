@@ -8,8 +8,10 @@
     </head>
     <body>
     {% include "navbar.html" %}
-        <div>
+    <div> {% include 'messages.html' %} </div>    
+    <div>
         {% block contain %} {% endblock %}
         </div>
+        
     </body>
 </html>
