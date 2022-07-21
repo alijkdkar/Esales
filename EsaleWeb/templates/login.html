@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 
 {% block contain %}
-<form action="" method="POST" >
+
+<div class="h-100 d-flex align-items-center justify-content-center">
+    
+
+<form action=""  method="POST" >
+    <div class="form-group">
 {% csrf_token %}
 {{form.as_p}}
-<input type="submit" value="Login" />
+<input type="submit" value="Login" class="btn btn-primary"/>
+    </div>
 </form>
+
+</div>
 {% endblock %}
