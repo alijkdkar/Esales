@@ -24,7 +24,6 @@ SECRET_KEY = 'django-insecure-f0m^%4+w1=lxyqfnid4+*(_aqzn86nt9!1_^2!=!k99ff$t*k4
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
 ALLOWED_HOSTS = []
 
 
@@ -118,6 +117,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+BOOTSTRAP3 = {
+    'jquery_url': STATIC_URL + 'js/jquery.min.js',
+    'css_url': STATIC_URL + 'css/bootstrap.min.css',
+    'theme_url': STATIC_URL + 'css/bootstrap-theme.min.css',
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
