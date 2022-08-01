@@ -13,5 +13,12 @@ class UserRegistertionForm(forms.Form):
 
 
 class UserLoginForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super(UserLoginForm, self).__init__(*args, **kwargs)
+        for visible in self.visible_fields():
+            visible.field.widget.attrs['class'] = 'form-control'
+
+
+            
     username =forms.CharField()
     password = forms.CharField()

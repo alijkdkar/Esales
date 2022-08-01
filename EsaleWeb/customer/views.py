@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from .froms import UserRegistertionForm,UserLoginForm
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate,login as authlogin
+from django.contrib.auth import authenticate,login as authlogin,logout as auth_logout
 from django.contrib import messages
 # Create your views here.
 
@@ -43,3 +43,9 @@ def login(requst):
     else:
         form = UserLoginForm()
     return render(requst,'login.html',{'form':form})    
+
+
+def logout(request):
+    auth_logout(request)
+    messages.success(request,'user logouted succefully','success')
+    return redirect('home')
