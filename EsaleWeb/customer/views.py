@@ -11,12 +11,16 @@ def signup(requst):
         form = UserRegistertionForm(requst.POST)
         if form.is_valid():
             cd = form.cleaned_data
+            if cd['password']!=cd["confirmPassword"]:
+                messages.success(requst,'confirm password is wrong','danger')
+                return render(requst,'signUp.html',{'form':form})
+
             user = User.objects.create_user(cd['username'],cd['email'],cd['password'])
             user.first_name = cd['firstName']
             user.last_name = cd['lastName']
             user.save() 
             print('sss')
-            messages.success(requst,'user added successfuly','sucess')
+            messages.success(requst,'user added successfuly','success')
             return redirect('home')
 
 

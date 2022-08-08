@@ -2,5 +2,28 @@
 
 
     {% block contain %}
-    <p>hello {{name}}</p>
+    {% comment %} <div class="card-group"> {% endcomment %}
+    {% for x in list %}
+   
+    {% comment %} <p>{{x.name}}</p>
+    <p>{{x.description}}</p>
+    <p>{{x.price}}</p> {% endcomment %}
+
+
+    <div class="card mb-3 container bg-dark text-white" >
+      <div class="lg-100">
+      <div class="lg-50">  
+      <img class="card-img-top img-fluid" src="{{x.photo.url}}" alt="Card image cap" style="height: 400px;">
+      </div>
+      <div class="card-body lg-50">
+          <h2 class="card-title pText">{{x.name}}</h5>
+          <p class="card-text pText">{{x.description}}</p>
+          <p class="card-text pText">{{x.price}}</p>
+          <a href="#" class="btn btn-primary">add to card</a>
+      </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% comment %} </div> {% endcomment %}
      {% endblock %}
+     

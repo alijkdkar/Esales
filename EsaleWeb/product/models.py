@@ -14,11 +14,11 @@ class Category(models.Model):
 class Product(models.Model):
     name  = models.CharField(max_length=100)
     codeNo = models.CharField(max_length=20)
-    description = models.CharField(max_length=500)
+    description = models.TextField(max_length=8000)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     active = models.BooleanField(default=True)
     orginal = models.BooleanField(default=False)
-    photo = models.ImageField(upload_to='uploads/products/%Y/%m/%d/')
+    photo = models.ImageField(upload_to='products/%Y/%m/%d/')
 
 class ProductDetail(models.Model):
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
