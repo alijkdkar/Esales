@@ -1,11 +1,14 @@
 {% extends "base.html" %}
-
+{% load i18n %}
 
 {% block contain %}
+
+<div class="flex-container">
+
 <form action="" method="POST">
 {% csrf_token %}
 {{ form.as_p }}
-
-<input type="submit" value="register"/>
+<input type="submit" value="{% translate 'register' %}" class="btn btn-primary"/>
 </form>
+</div>
 {% endblock %}
