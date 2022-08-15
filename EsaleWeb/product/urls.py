@@ -3,5 +3,5 @@ from . import views
 
 
 urlpatterns = [
-    path('productDetail/',views.productDetail,name='pdetail'),
+    path('productDetail/<int:pid>/',views.productDetail,name='pdetail'),
 ]
