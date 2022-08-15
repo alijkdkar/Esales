@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-08 11:38+0430\n"
+"POT-Creation-Date: 2022-08-15 22:36+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,17 +23,22 @@ msgid "signUp"
 msgstr "ثبت نام"
 
 #: templates/navbar.html:40
-#, fuzzy
-#| msgid "signUp"
+
 msgid "signOut"
-msgstr "ثبت نام"
+msgstr "خروج"
 
 #: templates/navbar.html:43
-#, fuzzy
-#| msgid "signUp"
 msgid "signIn"
-msgstr "ثبت نام"
+msgstr "ورود"
+
+#: templates/productDetail.html:25
+msgid "description"
+msgstr "توضیحات"
+
+#: templates/productDetail.html:26
+msgid "comments"
+msgstr "کامنت ها"
 
 #: templates/signUp.html:11
 msgid "register"
-msgstr "ذخیره"
+msgstr "ثبت نام"

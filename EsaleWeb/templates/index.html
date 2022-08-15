@@ -2,7 +2,7 @@
 
 
     {% block contain %}
-    {% comment %} <div class="card-group"> {% endcomment %}
+    <div class="card-group">
     {% for x in list %}
    
     {% comment %} <p>{{x.name}}</p>
@@ -10,20 +10,20 @@
     <p>{{x.price}}</p> {% endcomment %}
 
 
-    <div class="card mb-3 container bg-dark text-white" >
+    <div class="card" style="width: 18rem;">
       <div class="lg-100">
       <div class="lg-50">  
-      <img class="card-img-top img-fluid" src="{{x.photo.url}}" alt="Card image cap" style="height: 400px;">
+      <img class="card-img-top img-fluid TitlleLink" src="{{x.photo.url}}" alt="Card image cap" style="height: 400px;">
       </div>
       <div class="card-body lg-50">
-          <h2 class="card-title pText">{{x.name}}</h5>
-          <p class="card-text pText">{{x.description}}</p>
+          <h2 class="card-title pText TitlleLink" ><a href={% url 'pdetail' x.id %}>{{x.name}}</a></h2>
+          <p class="card-text pText wrapText">{{x.description}}</p>
           <p class="card-text pText">{{x.price}}</p>
           <a href="#" class="btn btn-primary">add to card</a>
       </div>
       </div>
     </div>
     {% endfor %}
-    {% comment %} </div> {% endcomment %}
+    </div>
      {% endblock %}
      
