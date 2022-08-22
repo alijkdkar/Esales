@@ -6,7 +6,7 @@
 <div class="container">
     <div class="row">
     <div class="col-sm-auto">
-        <img class="card-img-top img-fluid TitlleLink " src="{{form.photo.url}}" alt="Card image cap" style="height: 400px;width:400px;">
+        <img class="card-img-top img-fluid TitlleLink " src="{{form.photo.url}}" alt="Card image cap" style="height: 100%;width:400px;">
     </div>
     <div class="col-sm " >
         <h2 class="lg-32">{{ form.name }}</p>
@@ -14,16 +14,29 @@
     </div>
     <div class="col-md" style="background: #eeeeee;">
          <div class="d-flex flex-column bd-highlight mb-3">
-            <p class="lg-32 pText">{{ form.price }}</p>   
+             
             <p class="lg-32 pText">{% trans "color" %}</p>   
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="direction:ltr">
                 <div class="btn-group mr-2" role="group" aria-label="first group">
                   <button type="button" class="btn btn-secondary">red</button>
                   <button type="button" class="btn btn-secondary">gray</button>
                   <button type="button" class="btn btn-secondary">blue</button>
-                  <button type="button" class="btn btn-secondary">4</button>
+                  <button type="button" class="btn btn-secondary">yellow</button>
                 </div>
               </div> 
+
+
+              <p class="lg-32 pText">{% trans "size" %}</p>   
+            <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="direction:ltr">
+                <div class="btn-group mr-2" role="group" aria-label="first group">
+                  <button type="button" class="btn btn-secondary">1x</button>
+                  <button type="button" class="btn btn-secondary">2x</button>
+                  <button type="button" class="btn btn-secondary">3x</button>
+                  <button type="button" class="btn btn-secondary">4x</button>
+                </div>
+              </div> 
+              <p class="lg-32 pText">{% trans "price" %}</p>   
+              <p class="lg-32 pText">{{ form.price }} {% trans "priceUnit" %}</p> 
         <button type="button" class="btn btn-danger btn-Add-Card p-2 bd-highlight">{% trans "add to card" %}</button>
         
     </div> 

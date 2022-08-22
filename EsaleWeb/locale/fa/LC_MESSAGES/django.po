@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-15 22:36+0430\n"
+"POT-Creation-Date: 2022-08-22 22:37+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,7 +23,6 @@ msgid "signUp"
 msgstr "ثبت نام"
 
 #: templates/navbar.html:40
-
 msgid "signOut"
 msgstr "خروج"
 
@@ -31,11 +30,31 @@ msgstr "خروج"
 msgid "signIn"
 msgstr "ورود"
 
-#: templates/productDetail.html:25
+#: templates/productDetail.html:19
+msgid "color"
+msgstr "رنگ"
+
+#: templates/productDetail.html:30
+msgid "size"
+msgstr "اندازه"
+
+#: templates/productDetail.html:39
+msgid "price"
+msgstr "قیمت"
+
+#: templates/productDetail.html:40
+msgid "priceUnit"
+msgstr "ریال"
+
+#: templates/productDetail.html:41
+msgid "add to card"
+msgstr "اضافه کردن به سبد"
+
+#: templates/productDetail.html:55
 msgid "description"
 msgstr "توضیحات"
 
-#: templates/productDetail.html:26
+#: templates/productDetail.html:56
 msgid "comments"
 msgstr "کامنت ها"
 
