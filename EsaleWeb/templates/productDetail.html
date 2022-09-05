@@ -15,6 +15,9 @@
             <path d="M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
           </svg>
           {% endif %}
+          {% for pp in  form.prop  %}
+          <p class="card-text pText product-prop-text-size">{{ pp.detailName }} : {{ pp.value }} </p>
+          {% endfor %}
         {% comment %} <p class="lg-32 pText">{{ form.price }}</p> {% endcomment %}
     </div>
     <div class="col-md product-order-card" >
@@ -23,10 +26,11 @@
             <p class="lg-32 pText">{% trans "color" %}</p>   
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="direction:ltr">
                 <div class="btn-group mr-2" role="group" aria-label="first group">
-                  <button type="button" class="btn btn-secondary">red</button>
-                  <button type="button" class="btn btn-secondary">gray</button>
-                  <button type="button" class="btn btn-secondary">blue</button>
-                  <button type="button" class="btn btn-secondary">yellow</button>
+                  {% for coler in form.color %}
+                  <button type="button" class="btn btn-secondary" style="background-color:{{ coler.value }}">{{ coler.colorName }}</button>
+                  {% endfor %}
+                  
+                  
                 </div>
               </div> 
 
@@ -34,10 +38,11 @@
               <p class="lg-32 pText">{% trans "size" %}</p>   
             <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups" style="direction:ltr">
                 <div class="btn-group mr-2" role="group" aria-label="first group">
-                  <button type="button" class="btn btn-secondary">1x</button>
-                  <button type="button" class="btn btn-secondary">2x</button>
-                  <button type="button" class="btn btn-secondary">3x</button>
-                  <button type="button" class="btn btn-secondary">4x</button>
+                  {% for siz in form.size %}
+                  <button type="button" class="btn btn-secondary">{{ siz.sizeName }}</button>
+                  {% endfor %}
+                  
+                 
                 </div>
               </div> 
               <p class="lg-32 pText">{% trans "price" %}</p>   

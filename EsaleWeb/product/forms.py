@@ -1,4 +1,7 @@
+from typing import List
 from django import forms
+
+from EsaleWeb.product.models import ProductDetail
 
 
 
@@ -10,5 +13,6 @@ class ProductFullDetail(forms.Form):
     active = forms.BooleanField()
     orginal = forms.BooleanField()
     photo = forms.URLField
+    prop = forms.ModelChoiceField(queryset=ProductDetail.objects.filter(), required=False, help_text="ProductDetail")
     
     

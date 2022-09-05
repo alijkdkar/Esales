@@ -32,7 +32,7 @@
         <a href={% url 'pdetail' x.id %}><img class="card-img-top img-fluid TitlleLink" src="{{x.photo.url}}" alt="Card image cap" style="height: 400px;"></a>
       </div>
       <div class="card-body lg-50">
-          <h2 class="card-title pText TitlleLink" ><a href={% url 'pdetail' x.id %}>{{x.name}}</a></h2>
+          <h2 class="card-title pText TitlleLink" ><a href={% url 'pdetail' x.id %} target="_blank" >{{x.name}}</a></h2>
           <p class="card-text pText wrapText">{{x.description}}</p>
           <p class="card-text pText">{{x.price}}</p>
           <a href="#" class="btn btn-primary">add to card</a>

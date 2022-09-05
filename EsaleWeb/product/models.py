@@ -2,6 +2,7 @@ from ast import mod
 from pyexpat import model
 from unicodedata import name
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 
@@ -22,9 +23,16 @@ class Product(models.Model):
 
 class ProductDetail(models.Model):
     product = models.ForeignKey(Product,on_delete=models.CASCADE)
-    name = models.CharField(max_length=100)
+    detailName = models.CharField(max_length=100)
     value = models.CharField(max_length=100)
 
+class Color(models.Model):
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    colorName = models.CharField(max_length=100)
+    value = models.CharField(max_length=100)
     
-
+class size(models.Model):
+    product = models.ForeignKey(Product,on_delete=models.CASCADE)
+    sizeName = models.CharField(max_length=100)
+    value = models.CharField(max_length=100)
         
