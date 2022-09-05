@@ -8,6 +8,6 @@ def index(requst):
     if requst.method == 'POST':
         pass
     else:    
-        viewData = models.Product.objects.all()
+        viewData = models.Product.objects.filter(active=1)
         print(viewData[0])
         return render(requst,'index.html',{"list":viewData})

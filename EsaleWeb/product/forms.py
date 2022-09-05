@@ -11,3 +11,4 @@ class ProductFullDetail(forms.Form):
     orginal = forms.BooleanField()
     photo = forms.URLField
     
+    

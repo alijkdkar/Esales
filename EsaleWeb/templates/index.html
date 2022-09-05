@@ -2,18 +2,34 @@
 
 
     {% block contain %}
-    <div class="card-group">
+    <div class="container">
+      <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">به فروش گاه من خوش آمدید</h1>
+          <p class="lead my-3">این شرکت از سال ۱۴۰۱ شروع به کار کرد و تا  تاریخ ۲۵/۸/۱۴۰۲ میتوانید از ۲۰ درصد تخفیف ویژه استفاده کنید </p>
+          <p class="lead mb-0"><a href="#" class="text-white fw-bold">بزن بریم خرید </a></p>
+        </div>
+      </div>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
     {% for x in list %}
    
-    {% comment %} <p>{{x.name}}</p>
-    <p>{{x.description}}</p>
-    <p>{{x.price}}</p> {% endcomment %}
 
+    {% comment %} <div class="card">
+      <img class="card-img-top" src="{{x.photo.url}}" alt="Card image cap" style="height: 362px;width: 362pxpx;">
+      <div class="card-body">
+        <h5 class="card-title pText TitlleLink" ><a href={% url 'pdetail' x.id %}>{{x.name}}</a></h5>
+        <p class="card-text pText wrapText">{{x.description}}</p>
+        <p class="card-text"><small class="text-muted">{{x.price}}</small></p>
+        <a href="#" class="btn btn-primary">add to card</a>
+      </div>
+    </div> {% endcomment %}
+    
 
-    <div class="card" style="width: 18rem;">
+    
+     <div class="col card" >
       <div class="lg-100">
       <div class="lg-50">  
-      <img class="card-img-top img-fluid TitlleLink" src="{{x.photo.url}}" alt="Card image cap" style="height: 400px;">
+        <a href={% url 'pdetail' x.id %}><img class="card-img-top img-fluid TitlleLink" src="{{x.photo.url}}" alt="Card image cap" style="height: 400px;"></a>
       </div>
       <div class="card-body lg-50">
           <h2 class="card-title pText TitlleLink" ><a href={% url 'pdetail' x.id %}>{{x.name}}</a></h2>
@@ -22,8 +38,10 @@
           <a href="#" class="btn btn-primary">add to card</a>
       </div>
       </div>
-    </div>
+    </div> 
+  
     {% endfor %}
+  </div>
     </div>
      {% endblock %}
      
